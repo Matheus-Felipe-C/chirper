@@ -15,12 +15,14 @@ RUN apk add --no-cache \
     libzip-dev \
     oniguruma-dev \
     postgresql-dev \
+    mariadb-dev \
     zip \
     unzip \
     curl
 
 RUN docker-php-ext-install \
     pdo \
+    pdo_mysql \
     pdo_pgsql \
     pgsql \
     zip
