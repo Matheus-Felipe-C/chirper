@@ -30,11 +30,6 @@ WORKDIR /var/www
 # Copy application files
 COPY . .
 
-RUN mkdir -p storage/framework/views \
-    storage/framework/cache \
-    storage/framework/sessions \
- && chown -R www-data:www-data storage bootstrap/cache
-
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
